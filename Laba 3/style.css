@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
+
+/* Палитра и базовая типографика */
+:root {
+    font-size: 100%;
+    --page: #edf1f5;
+    --canvas: #f6f8fb;
+    --paper: #fff;
+    --ink: #293643;
+    --navy: #142a43;
+    --nav: #213c58;
+    --teal: #105b59;
+    --line: #d5dfe8;
+    --link: #164d9f;
+    --visited: #643884;
+    --active: #9a3034;
+    --accent: #8de0cc;
+    --heading-font: "PT Serif", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.65em;
+    font-family: var(--heading-font);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.75rem); color: var(--navy); }
+h2 { font-size: 1.85rem; color: var(--teal); }
+h3 { font-size: 1.45rem; color: #334e79; }
+h4 { font-size: 1.2rem; color: #684578; }
+h5 { font-size: 1.1rem; color: #80501f; }
+h6 { font-size: 1rem; color: #694451; letter-spacing: 0.045em; }
+
+p {
+    margin: 0 0 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    hyphens: auto;
+}
+
+ul, ol { padding-inline-start: 1.5rem; }
+ul { list-style: square; }
+ul ul { list-style: circle; }
+li + li { margin-block-start: 0.3rem; }
+li::marker { color: var(--teal); }
+
+dt { color: var(--teal); }
+dd { margin: 0.2rem 0 0.75rem 1rem; }
+
+.important { color: var(--active); font-weight: 700; }
+.highlight { background: #fff0a8; color: #473715; padding: 0.06em 0.24em; border-radius: 0.2em; }
+
+/* Ссылки и состояния. Активное состояние следует за наведением. */
+a { color: var(--link); text-decoration: none; overflow-wrap: anywhere; }
+a:visited { color: var(--visited); }
+a:hover { color: var(--teal); text-decoration: underline; text-underline-offset: 0.2em; }
+a:active { color: var(--active); }
+a:focus-visible { outline: 0.15rem solid currentColor; outline-offset: 0.2rem; }
+
+/* Шапка, меню и каркас страницы */
+header {
+    padding: clamp(1.75rem, 5vw, 3.5rem) max(1rem, calc((100% - 66rem) / 2));
+    background: var(--navy);
+    border-bottom: 0.25rem solid var(--accent);
+}
+
+#site-title {
+    color: var(--paper);
+    max-inline-size: 22ch;
+    letter-spacing: -0.025em;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    padding: 0.55rem;
+    background: var(--nav);
+    border: 1px solid #526981;
+    border-radius: 0.65rem;
+}
+
+nav a { display: block; padding: 0.35rem 0.65rem; border-radius: 0.35rem; }
+nav a:link { color: #e7f3ff; }
+nav a:visited { color: #e6ceff; }
+nav a:hover { color: #aaf5df; }
+nav a:active { color: #ffd0ba; }
+nav a[aria-current="page"] { background: var(--accent); color: var(--navy); font-weight: 700; }
+
+main {
+    max-inline-size: 68rem;
+    margin: 1.5rem auto;
+    padding: clamp(0.8rem, 3vw, 2rem);
+    background: var(--canvas);
+    border: 1px solid var(--line);
+    border-radius: 0.8rem;
+}
+
+main > * + * { margin-block-start: 1rem; }
+main > nav { background: #2e465d; }
+
+/* Семантические блоки и содержимое */
+section, article, aside {
+    border-radius: 0.6rem;
+    overflow-wrap: anywhere;
+}
+
+section {
+    padding: clamp(1rem, 3vw, 1.7rem);
+    background: var(--paper);
+    border: 1px solid var(--line);
+}
+
+section section { margin-block-start: 1rem; }
+section article { margin-block: 1rem; }
+
+article {
+    padding: 1.15rem 1.4rem;
+    background: #e9f4f2;
+    border: 1px solid #b6dcd3;
+    border-inline-start: 0.3rem solid var(--teal);
+}
+
+aside {
+    padding: 0.85rem 1.1rem;
+    background: #fff8e6;
+    border: 1px dashed #ae8e47;
+}
+
+aside p { margin-block-end: 0.2rem; font-weight: 700; }
+
+blockquote {
+    margin: 1.25rem 0 0;
+    padding: 0.8rem 1.1rem;
+    background: #f2edf8;
+    border: 1px solid #dcd0eb;
+    border-inline-start: 0.25rem solid var(--visited);
+    font-style: italic;
+}
+
+section > :last-child, article > :last-child, blockquote > :last-child {
+    margin-block-end: 0;
+}
+
+hr { border: 0; border-top: 1px solid var(--line); margin-block: 1.25rem; }
+img { display: block; max-inline-size: 100%; block-size: auto; border-radius: 0.5rem; }
+
+.friend-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: 0.8rem;
+}
+
+.friend-list img { aspect-ratio: 1; object-fit: cover; margin-block-end: 0.75rem; }
+
+footer {
+    padding: 1.25rem 1rem;
+    background: #273344;
+    color: #e8eef6;
+    border-top: 1px solid #68778a;
+}
+
+footer p { max-inline-size: 66rem; margin: 0 auto; text-align: start; }
+
