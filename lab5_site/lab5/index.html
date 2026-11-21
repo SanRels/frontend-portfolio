@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+    <!-- index.html -->
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html"><span aria-hidden="true">МС</span> Мой сайт</a>
+            <input class="menu-toggle" type="checkbox" id="menu-toggle">
+            <label class="menu-button" for="menu-toggle" aria-label="Открыть меню"><span></span></label>
+            <nav class="site-nav" aria-label="Основное меню">
+                <a href="index.html" aria-current="page">Главная</a>
+                <a href="about.html">Обо мне</a>
+                <a href="friends.html">Друзья</a>
+                <a href="hobbies.html">Увлечения</a>
+                <a href="group.html">Учебная группа</a>
+                <a href="sps.html">СПС</a>
+            </nav>
+        <h1 id="site-title">Добро пожаловать на мой сайт!</h1>
+        </div>
+    </header>
+
+    <div class="page-grid">
+        <aside class="side-panel left-panel">
+            <h2>На этой странице</h2>
+            <nav aria-label="Навигация по странице">
+                <a href="#welcome">Приветствие</a> <a href="#about-me">Обо мне</a> <a href="#top">Наверх</a>
+            </nav>
+        </aside>
+        <main id="content">
+
+            <div class="flex-row">
+                <section>
+                    <h2 id="welcome">Добро пожаловать</h2>
+
+                    <p>
+                        Здесь вы узнаете обо мне, моих друзьях,<br>
+                        увлечениях и моей учебной группе.
+                    </p>
+                </section>
+                <section>
+                    <h2>Учёба</h2>
+                    <p>Группа ПИЖ-б-о-26-2, подгруппа 2.</p>
+                    <a href="group.html">Подробнее о группе</a>
+                </section>
+            </div>
+
+            <section>
+                <h2>Основные разделы</h2>
+
+                <ul class="card-grid link-cards">
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="friends.html">Друзья</a></li>
+                    <li><a href="hobbies.html">Увлечения</a></li>
+                    <li><a href="group.html">Учебная группа</a></li>
+                    <li><a href="sps.html">СПС</a></li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h2 id="about-me">Немного обо мне</h2>
+
+                <p>
+                    Я студент 1 курса направления
+                    <strong class="highlight">«Программная инженерия»</strong>,
+                    группы ПИЖ-б-о-26-2, подгруппы 2.
+                </p>
+
+                <h3>Мои основные интересы</h3>
+
+                <ul>
+                    <li>
+                        Программирование
+                        <ul>
+                            <li>Изучение C++</li>
+                            <li>Изучение HTML</li>
+                            <li>Разработка веб-сайтов</li>
+                        </ul>
+                    </li>
+
+                    <li>Учёба</li>
+                    <li>Саморазвитие</li>
+                </ul>
+
+                <blockquote>
+                    <p>Я стараюсь постоянно получать новые знания
+                        и применять их на практике.</p>
+                </blockquote>
+            </section>
+            <article>
+                <h2> Интересный факт:</h2>
+                <p> ФГАОУ ВО "Северо-Кавказский Федеральный Университет" Самый сильный <br>университет по подготовке IT специалистов на Севоро-Кавказе страны.</p>
+            </article>
+        </main>
+        <aside class="side-panel right-panel">
+            <h2>О разделе</h2>
+            <p>На сайте собраны сведения обо мне, моих интересах и учёбе.</p>
+            <p>Наш спонсор:</p>
+                <a href="https://el.ncfu.ru/">ФГАОУ ВО "Северо-Кавказский Федеральный Университет"</a>
+        </aside>
+    </div>
+
+    <footer>
+        <p>
+            &copy; 2026 Мой сайт<br>
+            Электронная почта: umartoew2831@gmail.com
+        </p>
+    </footer>
+
+</body>
+
+</html>

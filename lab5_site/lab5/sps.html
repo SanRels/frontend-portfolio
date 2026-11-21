@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронная образовательная среда</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+    <!-- sps.html -->
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html"><span aria-hidden="true">МС</span> Мой сайт</a>
+            <input class="menu-toggle" type="checkbox" id="menu-toggle">
+            <label class="menu-button" for="menu-toggle" aria-label="Открыть меню"><span></span></label>
+            <nav class="site-nav" aria-label="Основное меню">
+                <a href="index.html">Главная</a>
+                <a href="about.html">Обо мне</a>
+                <a href="friends.html">Друзья</a>
+                <a href="hobbies.html">Увлечения</a>
+                <a href="group.html">Учебная группа</a>
+                <a href="sps.html" aria-current="page">СПС</a>
+            </nav>
+        <h1 id="site-title">Электронная образовательная среда</h1>
+        </div>
+    </header>
+
+    <div class="page-grid">
+        <aside class="side-panel left-panel">
+            <h2>На этой странице</h2>
+            <nav aria-label="Навигация по странице">
+                <a href="#architecture">Архитектура</a>
+                <a href="#components">Компоненты</a>
+                <a href="#interfaces">Интерфейсы</a>
+                <a href="#stack">Стек и развитие</a>
+                <a href="#top">Наверх</a>
+            </nav>
+        </aside>
+        <main id="content">
+            <section>
+                <h2 id="architecture">Контекст и архитектурные слои</h2>
+                <p>Электронная образовательная среда объединяет учебные материалы, сдачу работ и выставление оценок. Студент отправляет работу, преподаватель проверяет её, администратор управляет доступом и эксплуатацией.</p>
+                <div class="card-grid">
+                    <article><h3>Представление</h3><p>Веб-кабинеты показывают курсы, задания, сроки и результаты.</p></article>
+                    <article><h3>Прикладная логика</h3><p>Сервер проверяет роли, сроки сдачи и переходы между состояниями работы.</p></article>
+                    <article><h3>Данные</h3><p>База хранит курсы, записи о работах и оценки. Файлы хранятся отдельно.</p></article>
+                </div>
+            </section>
+            <section>
+                <h2 id="components">Ключевые компоненты</h2>
+                <div class="card-grid">
+                    <article><h3>Курсы и задания</h3><p>Публикует материалы, задания и сроки для учебных групп.</p></article>
+                    <article><h3>Работы и оценки</h3><p>Регистрирует попытки сдачи и сохраняет оценку и комментарий преподавателя.</p></article>
+                    <article><h3>Доступ и уведомления</h3><p>Проверяет права на стороне сервера. Фоновый обработчик отправляет напоминания и сообщения об оценках.</p></article>
+                </div>
+            </section>
+            <section>
+                <h2 id="interfaces">Интерфейсы и обмен данными</h2>
+                <div class="flex-row">
+                    <article><h3>Пользовательский интерфейс</h3><p>Студент загружает файл через форму. Преподаватель открывает список работ курса и публикует результаты.</p></article>
+                    <article><h3>Программные интерфейсы</h3><p>Браузер обращается к REST API по HTTPS. Запрос <code>POST /api/submissions</code> передаёт идентификатор задания и файл. Сервер проверяет доступ и срок, сохраняет файл, регистрирует работу и возвращает её идентификатор.</p></article>
+                </div>
+            </section>
+            <section>
+                <h2 id="stack">Технологический стек и развитие</h2>
+                <p>Возможный стек системы включает HTML, CSS и JavaScript в браузере, Node.js на сервере, PostgreSQL для записей и объектное хранилище для файлов.</p>
+                <p>Направления развития включают единый вход через OpenID Connect, журналирование действий и повторную отправку уведомлений после временных сбоев.</p>
+            </section>
+        </main>
+        <aside class="side-panel right-panel">
+            <h2>О разделе</h2>
+            <p>Учебный пример архитектуры электронной образовательной среды.</p>
+
+        </aside>
+    </div>
+
+    <footer>
+        <p>
+            &copy; 2026 Мой сайт<br>
+            Электронная почта: umartoew2831@gmail.com
+        </p>
+    </footer>
+
+</body>
+
+</html>
